@@ -1,33 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:tour_ceylon/Splash_Screen/Screen5.dart';
 
-class SScreen4 extends StatefulWidget {
+class SScreen5 extends StatefulWidget {
   @override
-  State<SScreen4> createState() => _SScreen4State();
+  State<SScreen5> createState() => _SScreen5State();
 }
 
-class _SScreen4State extends State<SScreen4> with TickerProviderStateMixin {
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    Timer(
-      Duration(seconds: 5),
-          () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => SScreen5()),
-      ),
-    );
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+class _SScreen5State extends State<SScreen5> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +25,10 @@ class _SScreen4State extends State<SScreen4> with TickerProviderStateMixin {
               Image.asset("assets/Logos/TC_Logo2.png"),
               const SizedBox(height: 5),
               Expanded(
-                child: Image.asset("assets/Other/Intro3.png"),
+                child: Image.asset("assets/Other/Intro4.png"),
               ),
               Expanded(
-                child: Image.asset("assets/Other/Screen4.gif"),
+                child: Image.asset("assets/Other/Screen5.gif"),
               ),
             ],
           ),

@@ -65,8 +65,14 @@ flutter:
     - assets/Logos/TC_Logo2.png
     - assets/Other/Cube.gif
     - assets/Other/Screen2.gif
+    - assets/Other/Screen3.gif
+    - assets/Other/Screen4.gif
+    - assets/Other/Screen5.gif
     - assets/Other/Bg.png
     - assets/Other/Intro1.png
+    - assets/Other/Intro2.png
+    - assets/Other/Intro3.png
+    - assets/Other/Intro4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
