@@ -14,7 +14,7 @@ class _SScreen1State extends State<SScreen1> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 5),
+      Duration(seconds: 7),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => SScreen2()),
