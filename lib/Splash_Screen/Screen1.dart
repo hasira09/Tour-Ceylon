@@ -15,7 +15,7 @@ class _SScreen1State extends State<SScreen1> with TickerProviderStateMixin {
     super.initState();
     Timer(
       Duration(seconds: 7),
-      () => Navigator.pushReplacement(
+          () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => SScreen2()),
       ),
@@ -35,7 +35,12 @@ class _SScreen1State extends State<SScreen1> with TickerProviderStateMixin {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/Other/Background.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(35),
           child: Column(

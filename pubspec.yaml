@@ -74,6 +74,8 @@ flutter:
     - assets/Other/Intro3.png
     - assets/Other/Intro4.png
     - assets/Other/Login.png
+    - assets/Other/Background.jpg
+    - assets/Other/SPBackground.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
