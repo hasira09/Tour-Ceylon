@@ -37,6 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
@@ -77,8 +78,14 @@ flutter:
     - assets/Other/Login.png
     - assets/Other/Background.jpg
     - assets/Other/SPBackground.jpg
+    - assets/Icons/Home.svg
+    - assets/Icons/Hotel.svg
+    - assets/Icons/Location.svg
+    - assets/Icons/Protect.svg
+    - assets/Icons/Ride.svg
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+
+        # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see
