@@ -12,6 +12,7 @@ class _HotelPageState extends State<HotelPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text("Hotel Page"),
         elevation: 0,
       ),

@@ -83,6 +83,11 @@ flutter:
     - assets/Icons/Location.svg
     - assets/Icons/Protect.svg
     - assets/Icons/Ride.svg
+    - assets/Other/Laura.png
+    - assets/Icons/Button1.svg
+    - assets/Icons/Button2.svg
+    - assets/Icons/Button3.svg
+    - assets/Icons/Button4.svg
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

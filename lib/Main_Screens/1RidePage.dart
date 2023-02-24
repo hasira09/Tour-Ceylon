@@ -12,6 +12,7 @@ class _RidePageState extends State<RidePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text("Ride Page"),
         elevation: 0,
       ),

@@ -12,6 +12,7 @@ class _ProtectPageState extends State<ProtectPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text("Protect Page"),
         elevation: 0,
       ),

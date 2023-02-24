@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Main_Screens/BottomNavBar.dart';
 import 'Splash_Screen/Screen1.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SScreen1(),
+      home: BottomNavBar(),
     );
   }
 }
