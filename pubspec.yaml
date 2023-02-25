@@ -88,6 +88,7 @@ flutter:
     - assets/Icons/Button2.svg
     - assets/Icons/Button3.svg
     - assets/Icons/Button4.svg
+    - assets/Other/Grid.svg
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

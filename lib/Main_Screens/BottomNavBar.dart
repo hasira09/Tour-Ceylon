@@ -27,16 +27,35 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    double navBarHeight = size.height * 0.07;
+    double iconSize = size.width * 0.06;
+
     return Scaffold(
       extendBody: true,
       bottomNavigationBar: CurvedNavigationBar(
         index: _selectedIndex,
         items: [
-          SvgPicture.asset("assets/Icons/Ride.svg"),
-          SvgPicture.asset("assets/Icons/Location.svg"),
-          SvgPicture.asset("assets/Icons/Home.svg"),
-          SvgPicture.asset("assets/Icons/Hotel.svg"),
-          SvgPicture.asset("assets/Icons/Protect.svg"),
+          SvgPicture.asset(
+            "assets/Icons/Ride.svg",
+            height: iconSize,
+          ),
+          SvgPicture.asset(
+            "assets/Icons/Location.svg",
+            height: iconSize,
+          ),
+          SvgPicture.asset(
+            "assets/Icons/Home.svg",
+            height: iconSize,
+          ),
+          SvgPicture.asset(
+            "assets/Icons/Hotel.svg",
+            height: iconSize,
+          ),
+          SvgPicture.asset(
+            "assets/Icons/Protect.svg",
+            height: iconSize,
+          ),
         ],
         onTap: (index) {
           setState(() {
@@ -45,7 +64,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         },
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 350),
-        height: 60,
+        height: navBarHeight,
         backgroundColor: Colors.transparent,
         color: Colors.black,
       ),

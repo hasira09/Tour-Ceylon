@@ -20,68 +20,72 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Container(
-            height: size.height * .30,
-            decoration: BoxDecoration(color: Colors.white),
-          ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: EdgeInsets.symmetric(
+                horizontal: size.width * 0.05,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 62,
-                      width: 52,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        shape: BoxShape.circle,
+                  SizedBox(height: size.height * 0.05),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        child: Text(
+                          "Good Morning \nLaura",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4
+                              ?.copyWith(fontWeight: FontWeight.w800),
+                        ),
                       ),
-                      child: Image.asset("assets/Other/Laura.png"),
-                    ),
+                      Container(
+                        alignment: Alignment.topRight,
+                        height: size.height * 0.10,
+                        width: size.width * 0.30,
+                        child: Image.asset("assets/Other/Laura.png"),
+                      ),
+                    ],
                   ),
-                  Text(
-                    "Good Morning \nLaura",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline4
-                        ?.copyWith(fontWeight: FontWeight.w800),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 35),
-                  ),
+                  SizedBox(height: size.height * 0.08),
                   Expanded(
                     child: GridView(
                       children: [
                         InkWell(
                           onTap: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LocationPage()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LocationPage(),
+                              ),
+                            );
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(
+                                size.width * 0.05,
+                              ),
                               color: Color.fromRGBO(255, 57, 29, 0.25),
                             ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SvgPicture.asset(
                                   "assets/Icons/Button1.svg",
-                                  height: 160,
+                                  height: size.height * 0.14,
                                 ),
+                                SizedBox(height: size.height * 0.01),
                                 Text(
                                   "Discover a Place",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .titleSmall
-                                      ?.copyWith(fontSize: 17),
-                                )
+                                      .headline6
+                                      ?.copyWith(
+                                        fontSize: size.width * 0.05,
+                                      ),
+                                ),
                               ],
                             ),
                           ),
@@ -89,29 +93,36 @@ class _HomePageState extends State<HomePage> {
                         InkWell(
                           onTap: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => RidePage()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RidePage(),
+                              ),
+                            );
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(
+                                size.width * 0.05,
+                              ),
                               color: Color.fromRGBO(0, 0, 128, 0.1),
                             ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SvgPicture.asset(
                                   "assets/Icons/Button2.svg",
-                                  height: 160,
+                                  height: size.height * 0.14,
                                 ),
+                                SizedBox(height: size.height * 0.01),
                                 Text(
                                   "Take a Ride",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .titleSmall
-                                      ?.copyWith(fontSize: 17),
-                                )
+                                      .headline6
+                                      ?.copyWith(
+                                        fontSize: size.width * 0.05,
+                                      ),
+                                ),
                               ],
                             ),
                           ),
@@ -119,29 +130,36 @@ class _HomePageState extends State<HomePage> {
                         InkWell(
                           onTap: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HotelPage()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HotelPage(),
+                              ),
+                            );
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(
+                                size.width * 0.05,
+                              ),
                               color: Color.fromRGBO(0, 0, 128, 0.1),
                             ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SvgPicture.asset(
                                   "assets/Icons/Button3.svg",
-                                  height: 160,
+                                  height: size.height * 0.14,
                                 ),
+                                SizedBox(height: size.height * 0.01),
                                 Text(
                                   "Book a Hotel",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .titleSmall
-                                      ?.copyWith(fontSize: 17),
-                                )
+                                      .headline6
+                                      ?.copyWith(
+                                        fontSize: size.width * 0.05,
+                                      ),
+                                ),
                               ],
                             ),
                           ),
@@ -149,29 +167,36 @@ class _HomePageState extends State<HomePage> {
                         InkWell(
                           onTap: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ProtectPage()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProtectPage(),
+                              ),
+                            );
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(
+                                size.width * 0.05,
+                              ),
                               color: Color.fromRGBO(255, 57, 29, 0.25),
                             ),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SvgPicture.asset(
                                   "assets/Icons/Button4.svg",
-                                  height: 160,
+                                  height: size.height * 0.14,
                                 ),
+                                SizedBox(height: size.height * 0.01),
                                 Text(
                                   "Help to Protect",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .titleSmall
-                                      ?.copyWith(fontSize: 17),
-                                )
+                                      .headline6
+                                      ?.copyWith(
+                                        fontSize: size.width * 0.05,
+                                      ),
+                                ),
                               ],
                             ),
                           ),
@@ -183,10 +208,34 @@ class _HomePageState extends State<HomePage> {
                           crossAxisSpacing: 10),
                     ),
                   ),
+                  MaterialButton(
+                    height: 55,
+                    minWidth: 290,
+                    color: Colors.grey,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => RidePage()));
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0)),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SvgPicture.asset("assets/Other/Grid.svg"),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          "Schedule Your Journey",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
