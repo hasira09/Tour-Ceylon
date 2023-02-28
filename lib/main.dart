@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // Change this according to the requirement
-      
+
       home: FingerPrint(),
       //home: SScreen1(),
     );
