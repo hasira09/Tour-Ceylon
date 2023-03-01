@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:local_auth/local_auth.dart';
 
 class FingerPrint extends StatefulWidget {
   const FingerPrint({Key? key}) : super(key: key);
@@ -8,6 +10,43 @@ class FingerPrint extends StatefulWidget {
 }
 
 class _FingerPrintState extends State<FingerPrint> {
+  //Authenticating Fingerprint
+  LocalAuthentication auth = LocalAuthentication();
+  late bool _canCheckBiometric;
+  late List<BiometricType> _availableBiometrics;
+  String autherized = "Not Autherized";
+
+  //Function to use fingerprint sensors
+  Future<void> _checkBiometric() async {
+    bool canCheckBiometric;
+    try {
+      canCheckBiometric = await auth.canCheckBiometrics;
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    if (!mounted) return;
+    setState(() {
+      _canCheckBiometric = _canCheckBiometric;
+    });
+  }
+
+  //
+
+  Future<void> _getAvailableBioMetric() async {
+    List<BiometricType> availableBiometric;
+    try {
+      availableBiometric = await auth.getAvailableBiometrics();
+    } on PlatformException catch (e) {
+      print(e);
+    }
+    setState(() {;
+    });
+  }
+
+  Future<void> _authenticate() async{
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -16,6 +55,7 @@ class _FingerPrintState extends State<FingerPrint> {
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Center(
               child: Text("Login",
@@ -40,6 +80,33 @@ class _FingerPrintState extends State<FingerPrint> {
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold, //3.59
                     ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 15.0),
+                    width: 200.0,
+                    child: Text(
+                      "Authenticate using your Fingerprint instead of the Password",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, height: 1.2),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10.0),
+                    width: double.infinity,
+                    child: MaterialButton(
+                        color: Colors.black,
+                        elevation: 0.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 14.0, horizontal: 24.0),
+                          child: Text(
+                            "Authenticate",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        onPressed: () {}),
                   )
                 ],
               ),
