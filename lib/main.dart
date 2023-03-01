@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Main_Screens/BottomNavBar.dart';
 import 'Splash_Screen/Screen1.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
