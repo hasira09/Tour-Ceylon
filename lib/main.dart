@@ -3,8 +3,6 @@ import 'Main_Screens/BottomNavBar.dart';
 import 'Splash_Screen/Screen1.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'User_Authentication/FingerPrintAuth.dart';
-
 Future main() async{
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FingerPrint(),
+      home: SScreen1(),
     );
   }
 }
