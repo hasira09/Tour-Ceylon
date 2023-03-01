@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "210802284105",
+    "project_id": "tour-ceylon",
+    "storage_bucket": "tour-ceylon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210802284105:android:a7e6e7a65f7051d8e1d198",
+        "android_client_info": {
+          "package_name": "com.example.tour_ceylon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210802284105-ejt9h5e8rdr2lta3pm51beuei1t2d58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL4K8oU6s-2ofQUYdhqRmFwsSsBuAEZ9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210802284105-ejt9h5e8rdr2lta3pm51beuei1t2d58l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

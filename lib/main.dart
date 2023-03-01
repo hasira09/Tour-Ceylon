@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Main_Screens/BottomNavBar.dart';
 import 'Splash_Screen/Screen1.dart';
-import 'User_Authentication/FingerPrintAuth.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,11 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-
-      // Change this according to the requirement
-
-      home: FingerPrint(),
-      //home: SScreen1(),
+      home: SScreen1(),
     );
   }
 }
