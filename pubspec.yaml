@@ -69,6 +69,7 @@ flutter:
     - assets/Icons/
     - assets/Logos/
     - assets/Other/
+    - assets/Icons/CVV.svg
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

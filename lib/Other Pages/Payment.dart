@@ -13,13 +13,12 @@ class Payment extends StatefulWidget {
 }
 
 class _PaymentState extends State<Payment> {
-
   TextEditingController cardNumberController = TextEditingController();
   CardType cardType = CardType.Invalid;
 
-  void getCardTypeFrmNum(){
+  void getCardTypeFrmNum() {
     //First 6 digits will identify the type
-    if (cardNumberController.text.length <=6){
+    if (cardNumberController.text.length <= 6) {
       String cardNum = CardUtils.getCleanedNumber(cardNumberController.text);
       CardType type = CardUtils.getCardTypeFrmNumber(cardNum);
 
@@ -76,12 +75,11 @@ class _PaymentState extends State<Payment> {
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide: const BorderSide(
-                          color: Colors.black,
-                          width: 1.0,
-                        )
-                      ),
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide: const BorderSide(
+                            color: Colors.black,
+                            width: 1.0,
+                          )),
                       prefixIcon: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 10.0),
                         child: SizedBox(
@@ -101,9 +99,8 @@ class _PaymentState extends State<Payment> {
                     child: TextFormField(
                       decoration: InputDecoration(
                         hintText: "Name on Card",
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CardUtils.getCardIcon(cardType),
+                        suffixIcon: const Padding(
+                          padding: EdgeInsets.all(8.0),
                         ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
@@ -117,8 +114,7 @@ class _PaymentState extends State<Payment> {
                             borderSide: const BorderSide(
                               color: Colors.black,
                               width: 1.0,
-                            )
-                        ),
+                            )),
                         prefixIcon: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 10.0),
                           child: SizedBox(
@@ -133,7 +129,96 @@ class _PaymentState extends State<Payment> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(5)
+                          ],
+                          decoration: InputDecoration(
+                            hintText: "MM/YY",
+                            suffixIcon: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: const BorderSide(
+                                color: Colors.grey,
+                                width: 1.0,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                                borderSide: const BorderSide(
+                                  color: Colors.black,
+                                  width: 1.0,
+                                )),
+                            prefixIcon: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
+                              child: SizedBox(
+                                width: 24.0, // Adjust the width as desired
+                                height: 24.0, // Adjust the height as desired
+                                child: SvgPicture.asset(
+                                  "assets/Icons/Calender.svg",
+                                  width: 24.0, // Adjust the width as desired
+                                  height: 24.0, // Adjust the height as desired
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      Expanded(
+                        child: TextFormField(
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(4)
+                          ],
+                          decoration: InputDecoration(
+                            hintText: "CVV",
+                            suffixIcon: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                              borderSide: const BorderSide(
+                                color: Colors.grey,
+                                width: 1.0,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                                borderSide: const BorderSide(
+                                  color: Colors.black,
+                                  width: 1.0,
+                                )),
+                            prefixIcon: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
+                              child: SizedBox(
+                                width: 24.0, // Adjust the width as desired
+                                height: 24.0, // Adjust the height as desired
+                                child: SvgPicture.asset(
+                                  "assets/Icons/CVV.svg",
+                                  width: 24.0, // Adjust the width as desired
+                                  height: 24.0, // Adjust the height as desired
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
