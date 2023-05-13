@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tour_ceylon/Other%20Pages/Payment.dart';
 
 class RidePage extends StatefulWidget {
   const RidePage({Key? key}) : super(key: key);
@@ -13,8 +14,31 @@ class _RidePageState extends State<RidePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("Ride Page"),
+        title: const Text("Ride Page"),
         elevation: 0,
+      ),
+      body: Stack(
+        children: [
+          Center(
+              child: MaterialButton(
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Payment()));
+            },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Text(
+                      "Payment",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                )
+              ],
+            ),
+          )),
+        ],
       ),
     );
   }
