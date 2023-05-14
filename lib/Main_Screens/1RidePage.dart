@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tour_ceylon/Other%20Pages/Payment.dart';
+import '../PaymentPages/Payment.dart';
 
 class RidePage extends StatefulWidget {
   const RidePage({Key? key}) : super(key: key);

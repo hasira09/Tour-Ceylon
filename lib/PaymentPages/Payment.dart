@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'Card_Type.dart';
 import 'Card_Utility.dart';
+import 'Expiry_Validation.dart';
+import 'VerificationCode.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -43,12 +45,14 @@ class _PaymentState extends State<Payment> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: const Text("Add Payment Method"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           children: [
+            //const Spacer(),
             const SizedBox(height: 30),
             Form(
               child: Column(
@@ -80,18 +84,21 @@ class _PaymentState extends State<Payment> {
                             color: Colors.black,
                             width: 1.0,
                           )),
-                      prefixIcon: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10.0),
-                        child: SizedBox(
-                          width: 24.0, // Adjust the width as desired
-                          height: 24.0, // Adjust the height as desired
-                          child: SvgPicture.asset(
-                            "assets/Icons/Bank.svg",
-                            width: 24.0, // Adjust the width as desired
-                            height: 24.0, // Adjust the height as desired
-                          ),
-                        ),
-                      ),
+                      prefixIcon: cardType == CardType.Invalid
+                          ? null
+                          : Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
+                              child: SizedBox(
+                                width: 24.0, // Adjust the width as desired
+                                height: 24.0, // Adjust the height as desired
+                                child: SvgPicture.asset(
+                                  "assets/Icons/Bank.svg",
+                                  width: 24.0, // Adjust the width as desired
+                                  height: 24.0, // Adjust the height as desired
+                                ),
+                              ),
+                            ),
                     ),
                   ),
                   Padding(
@@ -137,7 +144,8 @@ class _PaymentState extends State<Payment> {
                           keyboardType: TextInputType.number,
                           inputFormatters: [
                             FilteringTextInputFormatter.digitsOnly,
-                            LengthLimitingTextInputFormatter(5)
+                            LengthLimitingTextInputFormatter(4),
+                            CardExpiryInputFormatter(),
                           ],
                           decoration: InputDecoration(
                             hintText: "MM/YY",
@@ -181,7 +189,7 @@ class _PaymentState extends State<Payment> {
                           keyboardType: TextInputType.number,
                           inputFormatters: [
                             FilteringTextInputFormatter.digitsOnly,
-                            LengthLimitingTextInputFormatter(4)
+                            LengthLimitingTextInputFormatter(3)
                           ],
                           decoration: InputDecoration(
                             hintText: "CVV",
@@ -220,6 +228,27 @@ class _PaymentState extends State<Payment> {
                     ],
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: SizedBox(
+                width: 350,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    )
+                  ),
+                  child: const Text("Proceed to Payment",
+                  style: TextStyle(fontSize: 18),),
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Verification()));
+                  },
+                ),
               ),
             ),
           ],
