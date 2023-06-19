@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Main_Screens/3HomePage.dart';
 import 'Splash_Screen/Screen1.dart';
 
 Future main() async{
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SScreen1(),
+      // home: HomePage(),
     );
   }
 }
