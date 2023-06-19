@@ -65,35 +65,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/Logos/TC_Logo1.png
-    - assets/Logos/TC_Logo2.png
-    - assets/Other/Cube.gif
-    - assets/Other/Screen2.gif
-    - assets/Other/Screen3.gif
-    - assets/Other/Screen4.gif
-    - assets/Other/Screen5.gif
-    - assets/Other/Bg.png
-    - assets/Other/Intro1.png
-    - assets/Other/Intro2.png
-    - assets/Other/Intro3.png
-    - assets/Other/Intro4.png
-    - assets/Other/Login.png
-    - assets/Other/Background.jpg
-    - assets/Other/SPBackground.jpg
-    - assets/Icons/Home.svg
-    - assets/Icons/Hotel.svg
-    - assets/Icons/Location.svg
-    - assets/Icons/Protect.svg
-    - assets/Icons/Ride.svg
-    - assets/Other/Laura.png
-    - assets/Icons/Button1.svg
-    - assets/Icons/Button2.svg
-    - assets/Icons/Button3.svg
-    - assets/Icons/Button4.svg
-    - assets/Other/Grid.svg
-    - assets/Logos/TC_Logo4.png
-    - assets/Other/Fingerprint.png
-    - assets/Logos/TCLogo.png
+    - assets/images/
+    - assets/Icons/
+    - assets/Logos/
+    - assets/Other/
+    - assets/Icons/CVV.svg
+
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

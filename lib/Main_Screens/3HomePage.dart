@@ -208,30 +208,6 @@ class _HomePageState extends State<HomePage> {
                           crossAxisSpacing: 10),
                     ),
                   ),
-                  MaterialButton(
-                    height: 55,
-                    minWidth: 290,
-                    color: Colors.grey,
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => RidePage()));
-                    },
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        SvgPicture.asset("assets/Other/Grid.svg"),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Text(
-                          "Schedule Your Journey",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
               ),
             ),
