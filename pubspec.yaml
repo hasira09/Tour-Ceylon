@@ -93,6 +93,7 @@ flutter:
     - assets/Other/Grid.svg
     - assets/Logos/TC_Logo4.png
     - assets/Other/Fingerprint.png
+    - assets/Logos/TCLogo.png
 
 
         # An image asset can refer to one or more resolution-specific "variants", see
