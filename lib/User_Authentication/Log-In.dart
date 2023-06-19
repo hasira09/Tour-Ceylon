@@ -62,11 +62,11 @@ class _LogInState extends State<LogIn> {
                         thickness: 2,
                         endIndent: 10,
                         indent: 30,
-                        color: Colors.grey.shade500,
+                        color: Colors.grey.shade400,
                       )
                   ),
 
-                  Text("Or"),
+                  Text("Or continue with"),
 
                   Expanded(
                       child: Divider(
@@ -74,7 +74,7 @@ class _LogInState extends State<LogIn> {
                         thickness: 2,
                         indent: 10,
                         endIndent: 30,
-                        color: Colors.grey.shade500,
+                        color: Colors.grey.shade400,
                       )
                   ),
                 ]
