@@ -5,29 +5,18 @@ packages:
     dependency: transitive
     description:
       name: _flutterfire_internals
-<<<<<<< Updated upstream
-      sha256: "64fcb0dbca4386356386c085142fa6e79c00a3326ceaa778a2d25f5d9ba61441"
-=======
-      sha256: d687576bb973e8d2539d0b4615d985336269a0dbe1b3984e937fd22d31406fb8
->>>>>>> Stashed changes
+      sha256: a742f71d7f3484253a623b30e19256aa4668ecbb3de6ad1beb0bcf8d4777ecd8
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.0"
+    version: "1.3.3"
   async:
     dependency: transitive
     description:
       name: async
-<<<<<<< Updated upstream
-      sha256: bfe67ef28df125b7dddcea62755991f807aa39a2492a23e1550161692950bbe0
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.10.0"
-=======
       sha256: "947bfcf187f74dbc5e146c9eb9c0f10c9f8b30743e341481c1e2ed3ecc18c20c"
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
->>>>>>> Stashed changes
   boolean_selector:
     dependency: transitive
     description:
@@ -40,11 +29,7 @@ packages:
     dependency: transitive
     description:
       name: characters
-<<<<<<< Updated upstream
-      sha256: e6a326c8af69605aec75ed6c187d06b349707a27fbff8222ca9cc2cff167975c
-=======
       sha256: "04a925763edad70e8443c99234dc3328f442e811f1d8fd1a72f1c8ad0f69a605"
->>>>>>> Stashed changes
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
@@ -60,53 +45,34 @@ packages:
     dependency: "direct main"
     description:
       name: cloud_firestore
-<<<<<<< Updated upstream
-      sha256: "65f148d9f5b4f389320abb45847120cf5e46094c1a8cbc64934ffc1e29688596"
-=======
-      sha256: "89d0786dd45eb4a058fe34de621ba2404a32f782b1d4055dbaedfb40f2fda74a"
->>>>>>> Stashed changes
+      sha256: "988351d4fcc58c47578d95d014018888b2ce7a228f84ce322fea4a127707a0d4"
       url: "https://pub.dev"
     source: hosted
-    version: "4.7.0"
+    version: "4.8.1"
   cloud_firestore_platform_interface:
     dependency: transitive
     description:
       name: cloud_firestore_platform_interface
-<<<<<<< Updated upstream
-      sha256: "43ccae09f7e0c82752e69c251c6dc5efcdff4ddcfc09564175a28657bbd74188"
-=======
-      sha256: be88dc57bbe36a8dc672d96651e8e946e7c480bdbdc5ca254cb87e22b337dea4
->>>>>>> Stashed changes
+      sha256: b6652ce95507e604f00cb0c9c9be2363d21746e82667f2f3d61edf2d33cad3bf
       url: "https://pub.dev"
     source: hosted
-    version: "5.14.0"
+    version: "5.15.1"
   cloud_firestore_web:
     dependency: transitive
     description:
       name: cloud_firestore_web
-<<<<<<< Updated upstream
-      sha256: e054c007217e28e07179bbae0564c2a4f6338a60bddb0c139e4834e953f4b95c
-=======
-      sha256: f43b2fba735086e6746177edcb326a9991e9334b2ec0a121514c5f13b5cacf43
->>>>>>> Stashed changes
+      sha256: "22d02595eb7a304c0f1b4a717e78cc054522e8f237eb7b1122886f93130f3f7a"
       url: "https://pub.dev"
     source: hosted
-    version: "3.5.0"
+    version: "3.6.1"
   collection:
     dependency: transitive
     description:
       name: collection
-<<<<<<< Updated upstream
-      sha256: cfc915e6923fe5ce6e153b0723c753045de46de1b4d63771530504004a45fae0
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.17.0"
-=======
       sha256: "4a07be6cb69c84d677a6c3096fcf960cc3285a8330b4603e0d463d15d9bd934c"
       url: "https://pub.dev"
     source: hosted
     version: "1.17.1"
->>>>>>> Stashed changes
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -135,23 +101,15 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_core
-<<<<<<< Updated upstream
-      sha256: fe30ac230f12f8836bb97e6e09197340d3c584526825b1746ea362a82e1e43f7
-=======
-      sha256: "4491238f4fddc885bc994e304a035eb8aba2c935816b2c0b31d87f3ec6e96682"
->>>>>>> Stashed changes
+      sha256: a4a99204da264a0aa9d54a332ea0315ce7b0768075139c77abefe98093dd98be
       url: "https://pub.dev"
     source: hosted
-    version: "2.12.0"
+    version: "2.14.0"
   firebase_core_platform_interface:
     dependency: transitive
     description:
       name: firebase_core_platform_interface
-<<<<<<< Updated upstream
-      sha256: "5615b30c36f55b2777d0533771deda7e5730e769e5d3cb7fda79e9bed86cfa55"
-=======
       sha256: b63e3be6c96ef5c33bdec1aab23c91eb00696f6452f0519401d640938c94cba2
->>>>>>> Stashed changes
       url: "https://pub.dev"
     source: hosted
     version: "4.8.0"
@@ -159,14 +117,10 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-<<<<<<< Updated upstream
-      sha256: "291fbcace608aca6c860652e1358ef89752be8cc3ef227f8bbcd1e62775b833a"
-=======
-      sha256: "8c0f4c87d20e2d001a5915df238c1f9c88704231f591324205f5a5d2a7740a45"
->>>>>>> Stashed changes
+      sha256: "0fd5c4b228de29b55fac38aed0d9e42514b3d3bd47675de52bf7f8fccaf922fa"
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.0"
+    version: "2.6.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -202,17 +156,10 @@ packages:
     dependency: transitive
     description:
       name: js
-<<<<<<< Updated upstream
-      sha256: "5528c2f391ededb7775ec1daa69e65a2d61276f7552de2b5f7b8d34ee9fd4ab7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.6.5"
-=======
       sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
       url: "https://pub.dev"
     source: hosted
     version: "0.6.7"
->>>>>>> Stashed changes
   lints:
     dependency: transitive
     description:
@@ -225,17 +172,10 @@ packages:
     dependency: transitive
     description:
       name: matcher
-<<<<<<< Updated upstream
-      sha256: "16db949ceee371e9b99d22f88fa3a73c4e59fd0afed0bd25fc336eb76c198b72"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.12.13"
-=======
       sha256: "6501fbd55da300384b768785b83e5ce66991266cec21af89ab9ae7f5ce1c4cbb"
       url: "https://pub.dev"
     source: hosted
     version: "0.12.15"
->>>>>>> Stashed changes
   material_color_utilities:
     dependency: transitive
     description:
@@ -248,11 +188,7 @@ packages:
     dependency: transitive
     description:
       name: meta
-<<<<<<< Updated upstream
-      sha256: "6c268b42ed578a53088d834796959e4a1814b5e9e164f147f580a386e5decf42"
-=======
       sha256: "3c74dbf8763d36539f114c799d8a2d87343b5067e9d796ca22b5eb8437090ee3"
->>>>>>> Stashed changes
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
@@ -260,11 +196,7 @@ packages:
     dependency: transitive
     description:
       name: path
-<<<<<<< Updated upstream
-      sha256: db9d4f58c908a4ba5953fcee2ae317c94889433e5024c27ce74a37f94267945b
-=======
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
->>>>>>> Stashed changes
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
@@ -349,17 +281,10 @@ packages:
     dependency: transitive
     description:
       name: test_api
-<<<<<<< Updated upstream
-      sha256: ad540f65f92caa91bf21dfc8ffb8c589d6e4dc0c2267818b4cc2792857706206
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.4.16"
-=======
       sha256: eb6ac1540b26de412b3403a163d919ba86f6a973fe6cc50ae3541b80092fdcfb
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1"
->>>>>>> Stashed changes
   vector_math:
     dependency: transitive
     description:

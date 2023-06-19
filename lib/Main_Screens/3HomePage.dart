@@ -32,14 +32,12 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        child: Text(
-                          "Good Morning \nLaura",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline4
-                              ?.copyWith(fontWeight: FontWeight.w800),
-                        ),
+                      Text(
+                        "Good Morning \nLaura",
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleLarge
+                            ?.copyWith(fontWeight: FontWeight.w800),
                       ),
                       Container(
                         alignment: Alignment.topRight,
@@ -52,13 +50,17 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: size.height * 0.08),
                   Expanded(
                     child: GridView(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 10),
                       children: [
                         InkWell(
                           onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LocationPage(),
+                                builder: (context) => const LocationPage(),
                               ),
                             );
                           },
@@ -67,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(
                                 size.width * 0.05,
                               ),
-                              color: Color.fromRGBO(255, 57, 29, 0.25),
+                              color: const Color.fromRGBO(255, 57, 29, 0.25),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -81,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                                   "Discover a Place",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6
+                                      .titleLarge
                                       ?.copyWith(
                                         fontSize: size.width * 0.05,
                                       ),
@@ -95,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => RidePage(),
+                                builder: (context) => const RidePage(),
                               ),
                             );
                           },
@@ -104,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(
                                 size.width * 0.05,
                               ),
-                              color: Color.fromRGBO(0, 0, 128, 0.1),
+                              color: const Color.fromRGBO(0, 0, 128, 0.1),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                                   "Take a Ride",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6
+                                      .titleLarge
                                       ?.copyWith(
                                         fontSize: size.width * 0.05,
                                       ),
@@ -132,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HotelPage(),
+                                builder: (context) => const HotelPage(),
                               ),
                             );
                           },
@@ -141,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(
                                 size.width * 0.05,
                               ),
-                              color: Color.fromRGBO(0, 0, 128, 0.1),
+                              color: const Color.fromRGBO(0, 0, 128, 0.1),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -155,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                                   "Book a Hotel",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6
+                                      .titleLarge
                                       ?.copyWith(
                                         fontSize: size.width * 0.05,
                                       ),
@@ -169,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ProtectPage(),
+                                builder: (context) => const ProtectPage(),
                               ),
                             );
                           },
@@ -178,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.circular(
                                 size.width * 0.05,
                               ),
-                              color: Color.fromRGBO(255, 57, 29, 0.25),
+                              color: const Color.fromRGBO(255, 57, 29, 0.25),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -192,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                                   "Help to Protect",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6
+                                      .titleLarge
                                       ?.copyWith(
                                         fontSize: size.width * 0.05,
                                       ),
@@ -202,10 +204,6 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ],
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 10,
-                          crossAxisSpacing: 10),
                     ),
                   ),
                 ],
