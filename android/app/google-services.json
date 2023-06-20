@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "210802284105",
-    "project_id": "tour-ceylon",
-    "storage_bucket": "tour-ceylon.appspot.com"
+    "project_number": "654483501704",
+    "project_id": "tour-ceylon-34a84",
+    "storage_bucket": "tour-ceylon-34a84.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:210802284105:android:a7e6e7a65f7051d8e1d198",
+        "mobilesdk_app_id": "1:654483501704:android:5d45e9b8f1c59c9de7e53d",
         "android_client_info": {
           "package_name": "com.example.tour_ceylon"
         }
       },
       "oauth_client": [
         {
-          "client_id": "210802284105-ejt9h5e8rdr2lta3pm51beuei1t2d58l.apps.googleusercontent.com",
+          "client_id": "654483501704-bqp3iqhgd9h2vbaanc5tok5drd68m032.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAL4K8oU6s-2ofQUYdhqRmFwsSsBuAEZ9Y"
+          "current_key": "AIzaSyCo4SGseKyG-RKUb-DNXcdDCriKpFIPulU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "210802284105-ejt9h5e8rdr2lta3pm51beuei1t2d58l.apps.googleusercontent.com",
+              "client_id": "654483501704-bqp3iqhgd9h2vbaanc5tok5drd68m032.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "654483501704-cqsvn71op8io6t26e7ta0pr5f2ika2ga.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tourCeylon"
+              }
             }
           ]
         }
