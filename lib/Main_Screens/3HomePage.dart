@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tour_ceylon/Main_Screens/1RidePage.dart';
@@ -14,10 +15,29 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final user = FirebaseAuth.instance.currentUser!;
+
+  // sign user out method
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; //total height and width of device
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Email: " + user.email!,
+          style: TextStyle(fontSize: 20),),
+        backgroundColor: Colors.white,
+        actions: [
+          IconButton(
+            onPressed: signUserOut,
+            icon: Icon(Icons.logout,color: Colors.black,),
+          )
+        ],
+      ),
       body: Stack(
         children: <Widget>[
           SafeArea(

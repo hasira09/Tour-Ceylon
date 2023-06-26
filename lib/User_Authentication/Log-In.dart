@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:tour_ceylon/User_Authentication/Sign-Up.dart';
 
 import '../Components/black_button.dart';
 import '../Components/my_textfield.dart';
@@ -15,7 +17,78 @@ class _LogInState extends State<LogIn> {
   // text editing controllers
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+// sign user in method
+  void signUserIn() async {
+    // show loading circle
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
 
+    // try sign in
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+      // pop the loading circle
+      Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      // pop the loading circle
+      Navigator.pop(context);
+      // WRONG EMAIL
+      if (e.code == 'user-not-found') {
+        // show error to user
+        wrongEmailMessage();
+      }
+
+      // WRONG PASSWORD
+      else if (e.code == 'wrong-password') {
+        // show error to user
+        wrongPasswordMessage();
+      }
+    }
+  }
+
+  // wrong email message popup
+  void wrongEmailMessage() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          backgroundColor: Colors.deepPurple,
+          title: Center(
+            child: Text(
+              'Incorrect Email',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  // wrong password message popup
+  void wrongPasswordMessage() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          backgroundColor: Colors.deepPurple,
+          title: Center(
+            child: Text(
+              'Incorrect Password',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +124,7 @@ class _LogInState extends State<LogIn> {
             SizedBox(height: 20,),
 
             BlackButton(
-              onTap: () {},
+              onTap: signUserIn,
               childText: 'Login',
             ),
 
@@ -109,7 +182,30 @@ class _LogInState extends State<LogIn> {
                 width: 265,
                 child: Image.asset('assets/Other/fingerprintL.png')),
 
+            const SizedBox(height: 25),
 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Don't have an Account?",
+                  style: TextStyle(fontSize: 17, color: Colors.black),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SignUp()));
+                  },
+                  child: Text(
+                    "Sign In",
+                    style: TextStyle(
+                        fontSize: 17,
+                        color: Color.fromRGBO(255, 57, 29, 1)),
+                  ),
+                ),
+              ],
+            ),
 
           ],
         ),
